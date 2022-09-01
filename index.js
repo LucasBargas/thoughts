@@ -12,6 +12,10 @@ const conn = require('./db/conn');
 const Toughts = require('./models/Tought');
 const User = require('./models/User');
 
+// Routes
+const toughtsRoutes = require('./routes/toughtsRoutes');
+const ToughtController = require('./controllers/ToughtController');
+
 // template engine
 app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars');
@@ -29,7 +33,7 @@ app.use(express.json());
 app.use(
   session({
     name: 'session',
-    secret: 'my_secret',
+    secret: 'nosso_secret',
     resave: false,
     saveUninitialized: 'false',
     store: new FileStore({
@@ -58,6 +62,11 @@ app.use((req, res, next) => {
 
   next();
 });
+
+// Routes
+app.use('/toughts', toughtsRoutes);
+
+app.get('/', ToughtController.showToughts);
 
 conn
   .sync()
