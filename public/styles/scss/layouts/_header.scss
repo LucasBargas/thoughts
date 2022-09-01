@@ -8,18 +8,36 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #222;
-    color: #fff;
+    flex-wrap: wrap;
+    background: variables.$primary-color;
+    color: variables.$light-color;
     border-bottom: 1px solid variables.$orange-color;
+
+    @media (max-width: 420px) {
+      gap: 1.25rem;
+      flex-direction: column;
+      justify-content: center;
+    }
 
     ul {
       display: flex;
       list-style: none;
       gap: 1rem;
 
+      @media (max-width: 335px) {
+        gap: 0;
+        flex-direction: column;
+        text-align: center;
+      }
+
       a {
+        display: block;
         padding: .75rem 0 .75rem 1.25rem;
         transition: .2s;
+
+        @media (max-width: 420px) {
+          padding: .75rem;
+        }
 
         &:hover {
           color: variables.$orange-color;
