@@ -1,17 +1,1 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 2 | @use './layout/layout';
- *   | ^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   public\styles\scss\styles.scss 2:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 2 \2502  @use './layout/layout';\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   public\\styles\\scss\\styles.scss 2:1  root stylesheet";
-}
+*{padding:0;margin:0;box-sizing:border-box;font-family:Helvetica}body{background:#222;color:#fff}body a{text-decoration:none;color:#fff}@media(max-width: 480px){body{font-size:14px}}.header-navbar{padding:1.2rem 2.4rem;margin-bottom:1em;display:flex;justify-content:space-between;align-items:center;background-color:#222;color:#fff;border-bottom:1px solid #f6982d}.header-navbar ul{display:flex;list-style:none;gap:1rem}.header-navbar ul a{padding:.75rem 0 .75rem 1.25rem;transition:.2s}.header-navbar ul a:hover{color:#f6982d}/*# sourceMappingURL=styles.min.css.map */

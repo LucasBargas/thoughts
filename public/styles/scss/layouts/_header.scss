@@ -1,3 +1,30 @@
-header {
-  padding: 0;
+@use '../base/variables';
+@use '../base/base_mixins';
+
+.header {
+  &-navbar {
+    padding: 1.2rem 2.4rem;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    color: #fff;
+    border-bottom: 1px solid variables.$orange-color;
+
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 1rem;
+
+      a {
+        padding: .75rem 0 .75rem 1.25rem;
+        transition: .2s;
+
+        &:hover {
+          color: variables.$orange-color;
+        }
+      }
+    }
+  }
 }

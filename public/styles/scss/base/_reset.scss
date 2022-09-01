@@ -1,5 +1,22 @@
+@use '../base/variables';
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Helvetica;
+}
+
+body {
+  background: variables.$primary-color;
+  color: variables.$light-color;
+
+  a {
+    text-decoration: none;
+    color: variables.$light-color;
+  }
+
+  @media(max-width: 480px) {
+    font-size: 14px;
+  }
 }
