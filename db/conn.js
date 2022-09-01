@@ -8,7 +8,7 @@ const sequelize = new Sequelize('toughts', 'root', process.env.PASSWORD, {
 
 try {
   sequelize.authenticate(); // Checando conexão com o banco
-  console.log('Conectamos com sucesso com o Sequelize! Acesse: http://localhost:3000');
+  console.log('Conectado ao banco! Acesse: http://localhost:3000');
 } catch (error) {
   console.log('Não foi possível conectar: ', error);
 }

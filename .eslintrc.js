@@ -15,5 +15,6 @@ module.exports = {
     'prettier/prettier': 'error',
     'no-console': 'off',
     'no-unused-vars': 'off',
+    'global-require': 'off',
   },
 };
