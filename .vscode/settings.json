@@ -1,0 +1,18 @@
+{
+  "liveServer.settings.port": 5501,
+  "files.exclude": {
+    "node_modules": true,
+    ".vscode": true,
+    ".git": true,
+    ".gitignore": true,
+    "LICENSE.md": true,
+    "package.json": true,
+    "package-lock.json": true,
+    ".eslintrc.js": true,
+    ".editorconfig": true,
+    ".prettierrc.js": true,
+    "README.md": true,
+    ".env": true,
+    ".env.example": true,
+  }
+}
