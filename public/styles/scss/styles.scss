@@ -1,9 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.name {
-  margin-top: 0;
-}
+@use './base/base';
+@use './sass_layout/layout';
+@use './modules/modules';
