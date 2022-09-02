@@ -1,6 +1,15 @@
+@use '../base/variables';
+
 footer {
   padding: 2.5rem 2.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid variables.$orange-color;
+  background: variables.$primary-color;
+
+  span {
+    font-weight: bold;
+    color: variables.$orange-color;
+  }
 }
