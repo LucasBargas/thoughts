@@ -22,7 +22,7 @@
     ul {
       display: flex;
       list-style: none;
-      gap: 1rem;
+      gap: .75rem;
 
       @media (max-width: 335px) {
         gap: 0;
