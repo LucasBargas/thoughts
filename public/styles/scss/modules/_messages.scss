@@ -1,0 +1,25 @@
+@use '../base/variables';
+
+@keyframes modalAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: initial;
+    transform: translateY(0);
+  }
+}
+
+.message {
+  padding: 1em;
+  color: #004085;
+  background-color: #cce5ff;
+  border: 1px solid #b8daff;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto 2rem;
+  max-width: 60%;
+  animation: modalAnimation 0.6s forwards;
+}

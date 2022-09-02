@@ -34,7 +34,7 @@
       }
 
       input, textarea {
-        padding: 7px;
+        padding: .625rem;
         border-radius: 3px;
         border: 1px solid variables.$orange-color;
         outline: none;
@@ -42,6 +42,7 @@
     }
 
     input[type='submit'], .btn {
+      display: inline-block;
       background-color: transparent;
       color: variables.$orange-color;
       border: 2px solid variables.$orange-color;
@@ -57,6 +58,15 @@
       &:hover {
         background-color: variables.$orange-color;
         color: variables.$light-color;
+      }
+    }
+
+    .view-password {
+      margin-bottom: 1rem;
+      display: inline-block;
+
+      input, label {
+        cursor: pointer;
       }
     }
   }

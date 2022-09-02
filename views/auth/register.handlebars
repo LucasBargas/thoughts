@@ -1,14 +1,22 @@
 <section class="auth-container">
   <h2>Registrar</h2>
-  <form action="/register" method="POST">
+  <form action="/registrar" method="POST">
     <div class="form-control">
       <label for="name">Nome:</label>
-      <input type="name" name="name" id="name" placeholder="Digite o seu nome" required>
+      {{#if name}}
+        <input type="name" name="name" id="name" value="{{name}}" placeholder="Digite o seu nome" required>
+      {{else}}
+        <input type="name" name="name" id="name" placeholder="Digite o seu nome" required>
+      {{/if}}
     </div>
 
     <div class="form-control">
       <label for="email">E-mail:</label>
-      <input type="email" name="email" id="email" placeholder="Digite o seu e-mail" required>
+      {{#if email}}
+        <input type="email" name="email" id="email" value="{{email}}" placeholder="Digite o seu e-mail" required>
+      {{else}}
+        <input type="email" name="email" id="email" placeholder="Digite o seu e-mail" required>
+      {{/if}}
     </div>
 
     <div class="form-control">
@@ -21,7 +29,14 @@
       <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirme a sua senha" required>
     </div>
 
-    <input type="submit" value="Cadastrar">
+    <div class="view-password">
+      <input type="checkbox" id="check">
+      <label for="check">Visualizar senha</label>
+    </div>
+
+    <div>
+      <input type="submit" value="Cadastrar">
+    </div>
 
     <p>Já tem conta? <a href="/entrar">É só clicar aqui</a></p>
   </form>

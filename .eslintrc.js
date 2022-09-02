@@ -16,5 +16,6 @@ module.exports = {
     'no-console': 'off',
     'no-unused-vars': 'off',
     'global-require': 'off',
+    'no-useless-return': 'off',
   },
 };
