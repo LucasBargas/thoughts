@@ -8,6 +8,50 @@ module.exports = class AuthController {
     res.render('auth/login');
   }
 
+  static async loginPost(req, res) {
+    const { email, password } = req.body;
+
+    // find user on database by email
+    const user = await User.findOne({ where: { email } });
+
+    if (!user) {
+      req.flash('message' /* key */, 'Email ou senha incorretos!' /* value */);
+
+      res.render('auth/login');
+      return;
+    }
+
+    // see if password match with the password in the database
+    const passwordMatch = bcrypt.compareSync(password, user.password);
+
+    if (!passwordMatch) {
+      req.flash('message' /* key */, 'Email ou senha incorretos!' /* value */);
+
+      res.render('auth/login');
+      return;
+    }
+
+    try {
+      // Doing authentication
+      req.session.userId = user.id;
+
+      req.flash('message' /* key */, `Bem vindo, ${user.name}!` /* value */);
+
+      req.session.save(() => {
+        res.redirect('/');
+      });
+    } catch (err) {
+      console.log(`An error: ${err}`);
+
+      req.flash(
+        'message' /* key */,
+        'Ocorreu um erro, tente novamente mais tarde!' /* value */,
+      );
+
+      res.render('auth/login');
+    }
+  }
+
   static register(req, res) {
     res.render('auth/register');
   }
@@ -54,7 +98,7 @@ module.exports = class AuthController {
 
       req.flash(
         'message' /* key */,
-        'Cadastro realizado com sucesso!' /* value */,
+        `Cadastro realizado com sucesso. Bem vindo, ${createdUser.name}!` /* value */,
       );
 
       req.session.save(() => {

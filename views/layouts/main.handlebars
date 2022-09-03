@@ -23,6 +23,7 @@
           {{#if session.userId}}
             <li><a href="/toughts/dashboard">Dashboard</a></li>
             <li><a href="/sair">Sair</a></li>
+            <li>{{name}}</li>
           {{else}}
             <li><a href="/entrar">Entrar</a></li>
             <li><a href="/registrar">Registrar</a></li>
@@ -47,6 +48,6 @@
     </footer>
   </section>
 
-  <script type="module" src="/js/app.js"></script>
+  <script src="/js/app.js"></script>
 </body>
 </html>

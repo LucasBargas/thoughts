@@ -20,13 +20,11 @@ const showPasswords = () => {
   };
 
   const handleClick = () => {
-    checkPassowrd();
-    checkConfirmPassword();
+    if (password) checkPassowrd();
+    if (confirmPassword) checkConfirmPassword();
   };
 
-  if (password || confirmPassword) {
-    check.addEventListener('click', handleClick);
-  }
+  check.addEventListener('click', handleClick);
 };
 
 export default showPasswords;
