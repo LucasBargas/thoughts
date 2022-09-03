@@ -15,7 +15,10 @@ router.post(
   checkAuth,
   ToughtController.createToughtSave,
 );
+router.get('/dashboard/editar/:id', checkAuth, ToughtController.updateTought);
+router.post('/dashboard/editar', checkAuth, ToughtController.updateToughtSave);
 router.get('/dashboard', checkAuth, ToughtController.dashboard);
+router.post('/remove', checkAuth, ToughtController.removeTought);
 router.get('/', ToughtController.showToughts);
 
 module.exports = router;

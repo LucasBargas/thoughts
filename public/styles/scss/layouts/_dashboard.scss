@@ -48,4 +48,14 @@
       }
     }
   }
+
+  .empty {
+    a {
+      color: variables.$orange-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
