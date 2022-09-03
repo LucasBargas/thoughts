@@ -1,0 +1,22 @@
+@use '../base/variables';
+
+.tought-form-container {
+  a {
+    color: variables.$orange-color;
+
+    &:hover {
+      color: variables.$light-color;
+    }
+  }
+
+  h1 {
+    border-left: 4px solid variables.$orange-color;
+    padding: 10px;
+    margin-top: 1rem;
+  }
+
+  form {
+    max-width: 30%;
+    margin-top: 1.5rem;
+  }
+}
