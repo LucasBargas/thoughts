@@ -1,5 +1,3 @@
-@use '../base/variables';
-
 @keyframes modalAnimation {
   from {
     opacity: 0;
@@ -13,7 +11,7 @@
 }
 
 .message {
-  padding: 1em;
+  padding: 1rem;
   color: #004085;
   background-color: #cce5ff;
   border: 1px solid #b8daff;
