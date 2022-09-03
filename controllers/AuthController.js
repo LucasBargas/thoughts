@@ -57,8 +57,6 @@ module.exports = class AuthController {
         'Cadastro realizado com sucesso!' /* value */,
       );
 
-      console.log(createdUser);
-
       req.session.save(() => {
         res.redirect('/');
       });
