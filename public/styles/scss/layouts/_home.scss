@@ -1,0 +1,98 @@
+@use '../base//variables';
+
+.home-header {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  margin: 0 auto;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  span {
+    color: variables.$orange-color;
+  }
+
+  p {
+    margin-bottom: 1.2rem;
+  }
+
+  form {
+    margin-bottom: 1rem;
+  }
+
+  input {
+    border: none;
+    border-bottom: 1px solid variables.$light-color;
+    padding: 0.5rem;
+    margin-right: 1rem;
+
+    &[type='text'] {
+      width: 60%;
+    }
+
+    &::placeholder {
+      color: variables.$primary-color;
+    }
+  }
+}
+
+.order-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto 1rem;
+
+  span {
+    font-weight: bold;
+    color: variables.$light-color;
+  }
+
+  form {
+    margin: 0;
+
+    button {
+      margin-bottom: 0;
+      border: none;
+      cursor: pointer;
+
+      &:hover, .order-container a:hover {
+        color: variables.$orange-color;
+      }
+    }
+  }
+}
+
+.order-container {
+  span, button, a {
+    margin: 0 10px;
+    background: transparent;
+    color: variables.$light-color;
+  }
+
+  i {
+    color: variables.$orange-color;
+  }
+}
+
+.toughts-container {
+  figure {
+    border-bottom: 1px solid variables.$primary-color;
+    padding: 0.5rem;
+    max-width: 50%;
+    margin: 0 auto 1rem;
+  }
+
+  blockquote {
+    font-style: italic;
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  span {
+    color: variables.$orange-color;
+  }
+}

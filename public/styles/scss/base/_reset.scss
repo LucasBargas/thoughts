@@ -16,6 +16,10 @@ body {
     color: variables.$light-color;
   }
 
+  input {
+    outline: none;
+  }
+
   @media(max-width: 480px) {
     font-size: 14px;
   }
