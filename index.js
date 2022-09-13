@@ -8,8 +8,6 @@ const app = express();
 
 const conn = require('./db/conn');
 
-const port = process.env.PORT || 3000;
-
 // Models
 const Toughts = require('./models/Tought');
 const User = require('./models/User');
@@ -78,6 +76,6 @@ conn
   .sync()
   // .sync({ force: true }) // - Delete all datas, isn't good to produce
   .then(() => {
-    app.listen(port);
+    app.listen(3000);
   })
   .catch((err) => console.log(err));
