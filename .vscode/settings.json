@@ -11,7 +11,7 @@
     ".editorconfig": true,
     ".prettierrc.js": true,
     "README.md": true,
-    ".env": false,
+    ".env": true,
     ".env.example": true,
   }
 }

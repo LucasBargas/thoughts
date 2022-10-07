@@ -1,10 +1,15 @@
 require('dotenv').config();
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('toughts', 'root', process.env.PASSWORD, {
-  host: 'localhost',
-  dialect: 'mysql',
-});
+const sequelize = new Sequelize(
+  process.env.DB,
+  process.env.DB_USER,
+  process.env.PASSWORD,
+  {
+    host: 'localhost',
+    dialect: 'mysql',
+  },
+);
 
 try {
   sequelize.authenticate(); // Checando conexão com o banco
