@@ -12,6 +12,7 @@ Este projeto tem como objetivo armazenar **pensamentos**, especialmente, de dese
 #### Backend e Front end (App Monolito)
 * Nodejs;
 * Express-js;
+* Handlebars
 * MySQL com Sequelize;
 * Session Storage;
 * Javascript puro;
